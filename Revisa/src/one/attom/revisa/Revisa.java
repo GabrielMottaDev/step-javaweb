@@ -15,7 +15,7 @@ public class Revisa {
         return false;
     }
 
-    public static boolean iAAsPrimo(int numero) {
+    public static boolean isPrimo(int numero) {
         /* Numero primo é apenas divisivel por 1 e por ele mesmo,
          * então o for vai de 2 até um numero antes dele mesmo e verifica se é divisivel,
          * se for ele não é primo.
