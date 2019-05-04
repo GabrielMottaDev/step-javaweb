@@ -46,3 +46,8 @@ hs_err_pid*
 /AppWeb/build/
 /Cadastro/nbproject/private/
 /WebAppMVC/nbproject/private/
+/Cadastro/build/
+/Cadastro/dist/
+/WebJpa/build/
+/WebJpa/nbproject/private/
+/WebJpa/dist/
