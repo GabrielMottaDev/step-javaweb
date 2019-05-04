@@ -42,3 +42,6 @@ hs_err_pid*
 .recommenders
 .recomenders/*
 
+/AppWeb/nbproject/private/
+/AppWeb/build/
+/Cadastro/nbproject/private/
