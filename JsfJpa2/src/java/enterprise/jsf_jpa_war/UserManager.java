@@ -186,7 +186,6 @@ public class UserManager {
     }
     
     public String listUsers() {
-        System.out.println("teste testando");
         for(Wuser user : getUsers()){
             System.out.println("Name: " + user.getFirstname());
         }
