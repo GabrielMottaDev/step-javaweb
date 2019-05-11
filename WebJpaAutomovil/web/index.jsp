@@ -30,28 +30,25 @@
 
 <%@page contentType="text/html"%>
 <%@page pageEncoding="UTF-8"%>
+<%--
+The taglib directive below imports the JSTL library. If you uncomment it,
+you must also add the JSTL library to the project. The Add Library... action
+on Libraries node in Projects view can be used to add the JSTL 1.1 library.
+--%>
+<%--
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
-
+--%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Criar um registro de carro</title>
     </head>
     <body>
-
-    <h1>Criar um registro de carro</h1>
-    <form id="createCarroForm" action="CreateCarro" method="post">
-    <table>
-        <tr><td>ID:</td><td><input type="text" id = "id" name="id" /></td></tr>
-        <tr><td>Modelo:</td><td><input type="text" id = "modelo" name="modelo" /></td></tr>
-        <tr><td>Marca</td><td><input type="text" id = "marca" name="marca" /></td></tr>
-        <tr><td>Motor</td><td><input type="text" id = "motor" name="motor" /></td></tr>
-    </table>
-    <input type="submit" id="CreateRecord" value="Criar Registro" />
-    </form>
-<a href="ListCarro"><strong>Ir para a lista de carros</strong></a>
-</body>
+        <!--<h2>teste</h2>
+        <a href="ListCarro.jsp"><strong>Registro de carro</strong></a>
+        <a href="ListMoto.jsp"><strong>Registro de moto</strong></a>-->
+        <jsp:forward page="Principal" />
+    </body>
 </html>

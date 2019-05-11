@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
   Copyright (c) 2010, Oracle. All rights reserved.
 
@@ -28,30 +29,15 @@
   THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<%@page contentType="text/html"%>
-<%@page pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
-
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Criar um registro de carro</title>
-    </head>
-    <body>
-
-    <h1>Criar um registro de carro</h1>
-    <form id="createCarroForm" action="CreateCarro" method="post">
-    <table>
-        <tr><td>ID:</td><td><input type="text" id = "id" name="id" /></td></tr>
-        <tr><td>Modelo:</td><td><input type="text" id = "modelo" name="modelo" /></td></tr>
-        <tr><td>Marca</td><td><input type="text" id = "marca" name="marca" /></td></tr>
-        <tr><td>Motor</td><td><input type="text" id = "motor" name="motor" /></td></tr>
-    </table>
-    <input type="submit" id="CreateRecord" value="Criar Registro" />
-    </form>
-<a href="ListCarro"><strong>Ir para a lista de carros</strong></a>
-</body>
-</html>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="web-jpaPU" transaction-type="JTA">
+    <jta-data-source>jdbc/__default</jta-data-source>
+    <properties>
+      <!-- use this property if target server is GlassFish V3 with EclipseLink -->
+      <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+      <!-- use this property if target server uses toplink
+      <property name="toplink.ddl-generation" value="drop-and-create-tables"/>
+      -->
+    </properties>
+  </persistence-unit>
+</persistence>

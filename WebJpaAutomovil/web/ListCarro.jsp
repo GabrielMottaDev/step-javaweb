@@ -38,20 +38,32 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Criar um registro de carro</title>
+        <title>Lista de carros</title>
     </head>
     <body>
 
-    <h1>Criar um registro de carro</h1>
-    <form id="createCarroForm" action="CreateCarro" method="post">
-    <table>
-        <tr><td>ID:</td><td><input type="text" id = "id" name="id" /></td></tr>
-        <tr><td>Modelo:</td><td><input type="text" id = "modelo" name="modelo" /></td></tr>
-        <tr><td>Marca</td><td><input type="text" id = "marca" name="marca" /></td></tr>
-        <tr><td>Motor</td><td><input type="text" id = "motor" name="motor" /></td></tr>
-    </table>
-    <input type="submit" id="CreateRecord" value="Criar Registro" />
-    </form>
-<a href="ListCarro"><strong>Ir para a lista de carros</strong></a>
+    <h1>Lista de carros atualmente no banco de dados</h1>
+    
+<table id="carroListTable" border="3">
+<tr >
+    <th bgcolor=>ID</th>
+    <th bgcolor=>Modelo</th>
+    <th bgcolor=>Marca</th>
+    <th bgcolor=>Motor</th>
+</tr>
+<c:forEach var="carro" begin="0" items="${requestScope.carroList}">
+<tr>
+    <td>${carro.id}&nbsp;&nbsp;</td> 
+    <td>${carro.modelo}&nbsp;&nbsp;</td> 
+    <td>${carro.marca}&nbsp;&nbsp;</td> 
+    <td>${carro.motor}&nbsp;&nbsp;</td> 
+</tr> 
+
+</c:forEach>
+
+</table>
+<a href="CreateCarro.jsp"><strong>Criar um registro de carro</strong></a>
+<br/>
+<a href="Principal"><strong>Volta para listas</strong></a>
 </body>
 </html>

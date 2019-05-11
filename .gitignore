@@ -51,3 +51,6 @@ hs_err_pid*
 /WebJpa/build/
 /WebJpa/nbproject/private/
 /WebJpa/dist/
+/WebJpaAutomovil/build/
+/WebJpaAutomovil/nbproject/private/
+/WebJpaAutomovil/dist/

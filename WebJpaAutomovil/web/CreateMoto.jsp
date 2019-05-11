@@ -38,20 +38,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Criar um registro de carro</title>
+        <title>Criar um registro de moto</title>
     </head>
     <body>
 
-    <h1>Criar um registro de carro</h1>
-    <form id="createCarroForm" action="CreateCarro" method="post">
+    <h1>Criar um registro de moto</h1>
+    <form id="createMotoForm" action="CreateMoto" method="post">
     <table>
         <tr><td>ID:</td><td><input type="text" id = "id" name="id" /></td></tr>
         <tr><td>Modelo:</td><td><input type="text" id = "modelo" name="modelo" /></td></tr>
-        <tr><td>Marca</td><td><input type="text" id = "marca" name="marca" /></td></tr>
-        <tr><td>Motor</td><td><input type="text" id = "motor" name="motor" /></td></tr>
+        <tr><td>Marca:</td><td><input type="text" id = "marca" name="marca" /></td></tr>
+        <tr><td>Cilindrada:</td><td><input type="text" id = "cilindrada" name="cilindrada" /></td></tr>
     </table>
     <input type="submit" id="CreateRecord" value="Criar Registro" />
     </form>
-<a href="ListCarro"><strong>Ir para a lista de carros</strong></a>
+<a href="ListMoto"><strong>Ir para a lista de motos</strong></a>
 </body>
 </html>
