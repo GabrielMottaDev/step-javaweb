@@ -74,6 +74,14 @@ public class Wuser implements Serializable {
         this.username = username;
         this.password = password;
     }
+    
+    public Wuser(String firstname, String lastname, String username, String password) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.username = username;
+        this.password = password;
+        setSince(new Date());
+    }
 
     public Integer getId() {
         return this.id;

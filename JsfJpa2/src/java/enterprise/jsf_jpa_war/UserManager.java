@@ -133,7 +133,31 @@ public class UserManager {
             return null;
         }
     }
-    
+
+    public void generateUsers() {
+        List<Wuser> wusers = new ArrayList<Wuser>();
+
+        wusers.add(new Wuser("Gabriel", "Motta", "gabriel", "123"));
+        wusers.add(new Wuser("Zezinho", "Da Silva", "zezinsilveira", "123"));
+        wusers.add(new Wuser("Sei", "Nao", "seinao345", "123"));
+        wusers.add(new Wuser("Nao", "Te Interessa", "gabriel", "123"));
+        wusers.add(new Wuser("Um", "Usuario", "umusuariolegal", "123"));
+        wusers.add(new Wuser("Conta", "Legal", "conta_legal924", "123"));
+        wusers.add(new Wuser("Nome", "Aqui", "usuariomaneirin492", "123"));
+        wusers.add(new Wuser("A", "Resposta", "resposta42", "123"));
+        wusers.add(new Wuser("Teste", "Testador", "teste_testador", "123"));
+        wusers.add(new Wuser("Eae", "Blz", "eaeblz42", "123"));
+
+        try {
+            utx.begin();
+            for (Wuser wuser : wusers) {
+                em.persist(wuser);
+            }
+            utx.commit();
+        } catch (Exception e) {
+        }
+    }
+
     public String listUser() {
         FacesContext context = FacesContext.getCurrentInstance();
         List<Wuser> users = getUsers();
@@ -142,7 +166,7 @@ public class UserManager {
             return "list";
         } else {
             FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR,
-                    "Retorno vazio","!");
+                    "Retorno vazio", "!");
             context.addMessage(null, message);
             return null;
         }
@@ -198,7 +222,7 @@ public class UserManager {
             return null;
         }
     }
-    
+
     /**
      * <p>
      * When invoked, it will invalidate the user's session and move them to the
@@ -234,12 +258,12 @@ public class UserManager {
             return null;
         }
     }
-    
+
     private List<Wuser> getUsers() {
         try {
             List<Wuser> users = new ArrayList<Wuser>();
-            for(Object user : em.createNamedQuery("Wuser.findAll").setParameter("id", 0).getResultList()){
-                users.add((Wuser)user);
+            for (Object user : em.createNamedQuery("Wuser.findAll").setParameter("id", 0).getResultList()) {
+                users.add((Wuser) user);
             }
             return users;
         } catch (NoResultException nre) {

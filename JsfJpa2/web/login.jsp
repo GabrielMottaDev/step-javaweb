@@ -39,6 +39,10 @@
                 <h:commandLink id="create"
                                value="Criar nova conta"
                                action="create"/>
+                <br>
+                <h:commandLink id="generate"
+                               value="Gerar contas (PARA TESTES)"
+                               action="#{usermanager.generateUsers}"/>
             </h:form>
 
         </f:view>
