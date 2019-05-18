@@ -133,6 +133,20 @@ public class UserManager {
             return null;
         }
     }
+    
+    public String listUser() {
+        FacesContext context = FacesContext.getCurrentInstance();
+        List<Wuser> users = getUsers();
+        if (users != null) {
+            context.getExternalContext().getSessionMap().put("users", users);
+            return "list";
+        } else {
+            FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR,
+                    "Retorno vazio","!");
+            context.addMessage(null, message);
+            return null;
+        }
+    }
 
     /**
      * <p>
@@ -185,13 +199,6 @@ public class UserManager {
         }
     }
     
-    public String listUsers() {
-        for(Wuser user : getUsers()){
-            System.out.println("Name: " + user.getFirstname());
-        }
-        return "list";
-    }
-
     /**
      * <p>
      * When invoked, it will invalidate the user's session and move them to the

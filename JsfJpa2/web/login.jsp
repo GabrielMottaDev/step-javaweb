@@ -18,7 +18,8 @@
 
         <f:view>
             <h:messages style="color: red"
-                        showDetail="true"/>
+                        showDetail="true">
+            </h:messages>
             <h:form id="login">
                 <h:panelGrid columns="2" border="0">
                     Usuário: <h:inputText id="username" 
@@ -33,7 +34,7 @@
                 <br>
                 <h:commandLink id="listar"
                                value="Listar"
-                               action="#{usermanager.listUsers}"/>
+                               action="#{usermanager.listUser}"/>
                 <br>
                 <h:commandLink id="create"
                                value="Criar nova conta"
